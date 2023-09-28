@@ -1,4 +1,4 @@
-import { USERS } from "../logic/info"
+import { USERS } from "../functions/info"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,9 +8,9 @@ export default function LoginForm({ setUserToken }) {
     const [token, setToken] = useState(null)
 
     const navigate = useNavigate()
-    
+
     const loginUser = async (username, password) => {
-        
+
         //Fetch Request for logging in
         try {
             const response = await fetch(`${USERS}/login`, {
@@ -35,7 +35,7 @@ export default function LoginForm({ setUserToken }) {
             throw error
         }
         //After logging in, save token to sessionStorage
-        
+
     }
 
     const handleClick = async () => {
@@ -50,7 +50,7 @@ export default function LoginForm({ setUserToken }) {
     return (
         <form className="mx-5" onSubmit={(e) => e.preventDefault()}>
             <div className="form-floating mb-3 mx-5">
-                <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <label className="form-label">Username</label>
             </div>
             <div className="form-floating mb-3 mx-5">

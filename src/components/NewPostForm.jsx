@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { postPost } from "../logic/fetch";
+import { postPost } from "../functions/fetch";
 import { useNavigate } from "react-router-dom";
 
 export default function NewPostForm() {
@@ -33,9 +33,9 @@ export default function NewPostForm() {
     }
 
     return (
-        <form className="container" onSubmit={(e) => {e.preventDefault()}}>
+        <form className="container" onSubmit={(e) => { e.preventDefault() }}>
             <div className="form-floating">
-                <input required value={title} onChange={e => setTitle(e.target.value)} className="form-control" type="text"/>
+                <input required value={title} onChange={e => setTitle(e.target.value)} className="form-control" type="text" />
                 <label className="form-label">Title</label>
             </div>
             <div className="form-floating">
@@ -43,15 +43,15 @@ export default function NewPostForm() {
                 <label className="form-label">Description</label>
             </div>
             <div className="form-floating">
-                <input required value={price} onChange={e => setPrice(e.target.value)} className="form-control" type="text"/>
+                <input required value={price} onChange={e => setPrice(e.target.value)} className="form-control" type="text" />
                 <label className="form-label">Price</label>
             </div>
             <div className="form-floating">
-                <input value={location} onChange={e => setLocation(e.target.value)} className="form-control" type="text"/>
+                <input value={location} onChange={e => setLocation(e.target.value)} className="form-control" type="text" />
                 <label className="form-label">Location</label>
             </div>
             <div className="form-check my-3">
-                <input value={willDeliver} onChange={e => setWillDeliver(e.target.value)} className="form-check-input" type="checkbox"/>
+                <input value={willDeliver} onChange={e => setWillDeliver(e.target.value)} className="form-check-input" type="checkbox" />
                 <label className="form-check-label">Available for Delivery</label>
             </div>
             <button className="btn btn-primary" type="submit" onClick={() => handleClick()}>Submit</button>

@@ -1,7 +1,7 @@
-import { USERS } from "../logic/info"
+import { USERS } from "../functions/info"
 import { useState } from "react";
 
-export default function RegisterForm({setUserToken}) {
+export default function RegisterForm({ setUserToken }) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -33,7 +33,7 @@ export default function RegisterForm({setUserToken}) {
     return (
         <form className="mx-5" onSubmit={(e) => e.preventDefault()}>
             <div className="form-floating mb-3 mx-5">
-                <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <label className="form-label">Username</label>
             </div>
             <div className="form-floating mb-3 mx-5">

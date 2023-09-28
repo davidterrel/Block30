@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { fetchUser } from "../logic/fetch";
+import { fetchUser } from "../functions/fetch";
 import NewPostForm from "../components/NewPostForm";
 import OffcanvasForm from "../components/OffcanvasForm";
 
@@ -7,7 +7,7 @@ export default function Profile() {
     const [posts, setPosts] = useState([]);
     const [messages, setMessages] = useState([])
     const [username, setUsername] = useState()
-    
+
     useEffect(() => {
         async function fetchUserDetails() {
             try {
