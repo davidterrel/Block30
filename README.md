@@ -1,4 +1,5 @@
-# React + Vite
+here is a link to deployed project
+https://master--graceful-daifuku-f6676f.netlify.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
